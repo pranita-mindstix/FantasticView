@@ -8,12 +8,12 @@
 
 import UIKit
 
-class FantasticView: UIView {
+public class FantasticView: UIView {
     
     let colors : [UIColor] = [.red, .orange, .yellow, .green, .blue, .purple]
     var colorCounter = 0
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         let scheduledColorChanged = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { (timer) in  //1
             UIView.animate(withDuration: 2.0) {  //2
@@ -26,7 +26,7 @@ class FantasticView: UIView {
         // The Main Stuff
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         // You don't need to implement this
